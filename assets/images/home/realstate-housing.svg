@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74.724" height="81" viewBox="0 0 74.724 81">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#665bf6"/>
+      <stop offset="1" stop-color="#7de1ec"/>
+    </linearGradient>
+  </defs>
+  <path id="realstate-housing" d="M-332.455-403.489h.313q0,37.409,0,74.818a4.009,4.009,0,0,0,.062.506h4.646v-57.458H-320v57.51h4.854v4.623h-73.724v-4.656h9.6v-43.531h19.679v43.491h4.617V-376.44h-16.86v-15.893c.245-.077.486-.16.73-.229q16.455-4.614,32.91-9.229C-336.27-402.33-334.366-402.922-332.455-403.489Zm-13.511,21.97c0,3.059-.006,6.022.018,8.986a.585.585,0,0,0,.4.412c1.395.031,2.791.019,4.2.019v-9.416Zm-21.183,17.282h-4.586v9.324h4.586Zm21.227,9.331h4.579v-9.346h-4.579Zm-25.837,17.215h4.614V-347h-4.614Zm30.425,0v-9.325h-4.593v9.325Z" transform="translate(389.368 403.989)" stroke="rgba(0,0,0,0)" stroke-width="1" fill="url(#linear-gradient)"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61" height="61" viewBox="0 0 61 61">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff317d"/>
+      <stop offset="1" stop-color="#f9d1ff"/>
+    </linearGradient>
+  </defs>
+  <path id="microsoft-development" d="M32.2,61V32.193H61V61ZM0,61V32.193H28.807V61ZM32.2,28.807V0H61V28.807Zm-32.2,0V0H28.807V28.807Z" fill="url(#linear-gradient)"/>
+</svg>

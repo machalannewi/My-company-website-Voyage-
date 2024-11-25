@@ -1,0 +1,697 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Voyage Technologies</title>
+
+        <!-- For favicon png -->
+		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+       
+        <!--font-awesome.min.css-->
+        <!-- <link rel="stylesheet" href="assets/css/font-awesome.min.css"> -->
+
+        <!--linear icon css-->
+		<!-- <link rel="stylesheet" href="assets/css/linearicons.css"> -->
+
+		<!--animate.css-->
+        <!-- <link rel="stylesheet" href="assets/css/animate.css"> -->
+
+		<!--flaticon.css-->
+        <!-- <link rel="stylesheet" href="assets/css/flaticon.css"> -->
+
+		<!--slick.css-->
+        <!-- <link rel="stylesheet" href="assets/css/slick.css">
+		<link rel="stylesheet" href="assets/css/slick-theme.css"> -->
+		
+        <!--bootstrap.min.css-->
+        <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
+		
+		<!-- bootsnav -->
+		<!-- <link rel="stylesheet" href="assets/css/bootsnav.css" >	 -->
+        
+        <!--style.css-->
+        <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+        
+        <!--responsive.css-->
+        <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+
+
+        
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  primary: '#f63138',
+                }
+              }
+            }
+          }
+        </script>
+
+
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
+        <!--[if lt IE 9]> -->
+
+        
+        <style>
+          .floating-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 999;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+          }
+        
+          .floating-icon:hover {
+            transform: translateY(-10px); /* Moves the icon up */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+          }
+        </style>
+
+
+    </head>
+
+    <body class="font-[Poppins] w-full h-auto">
+
+
+      <header class="bg-white">
+        <nav class="fixed inset-x-0 top-0 z-10 mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 bg-white h-20" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="index.html" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-8 w-auto" src="assets/images/header/Voyage logo.PNG" alt="">
+            </a>
+          </div>
+          <!-- <div id="hamburger" class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Open main menu</span>
+              <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+              </svg>
+            </button>
+          </div> -->
+
+
+          <div class="hidden lg:flex lg:gap-x-12 -ml-24">
+            <a href="index.html" class="text-md font-semibold text-gray-900">Home</a>
+            <div class="relative group">
+              <button type="button" id="product-lg" class="flex items-center gap-x-1 text-md font-semibold text-gray-900" aria-expanded="false">
+                Services
+                <svg class="size-5 flex-none text-gray-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+      
+              <!--
+                'Product' flyout menu, show/hide based on flyout menu state.
+      
+                Entering: "transition ease-out duration-200"
+                  From: "opacity-0 translate-y-1"
+                  To: "opacity-100 translate-y-0"
+                Leaving: "transition ease-in duration-150"
+                  From: "opacity-100 translate-y-0"
+                  To: "opacity-0 translate-y-1"
+              -->
+              <div id="dropdown" class="absolute group-hover:block hidden -left-8 top-full z-10 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 -ml-36">
+                <div class="p-4">
+                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg class="size-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                      </svg>
+                    </div>
+                    <div class="flex-auto">
+                      <a href="web-dev.html" class="block font-semibold text-gray-900">
+                        Web Development
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">Building a responsive websites.</p>
+                    </div>
+                  </div>
+                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg
+                      class="size-6 text-gray-600 group-hover:text-indigo-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3 3h2l.4 2m0 0h13.2l.8 4H7.4m11.2-4l1.2 6H7.4m-4 0h2.4m2.2 0l.4 2H5.6M7.4 9.4L5.6 21m3-11.6l.8-4m0 0L15 6m0 0l-1.2 6m-6.4 0h4.8"
+                      />
+                    </svg>      
+                    </div>
+                    <div class="flex-auto">
+                      <a href="e-com.html" class="block font-semibold text-gray-900">
+                        E-commerce Development
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">E-commerce websites that drive sales.</p>
+                    </div>
+                  </div>
+                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg
+                      class="size-6 text-gray-600 group-hover:text-indigo-600"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M7 2.75h10a2 2 0 012 2v14.5a2 2 0 01-2 2H7a2 2 0 01-2-2V4.75a2 2 0 012-2zm5 16a1 1 0 100-2 1 1 0 000 2zm-3.5-6h7m-7-3h7"
+                      />
+                    </svg>
+                    
+                    </div>
+                    <div class="flex-auto">
+                      <a href="app-dev.html" class="block font-semibold text-gray-900">
+                        Mobile App Development
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">Designing mobile apps that inspire and engage</p>
+                    </div>
+                  </div>
+                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg class="size-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" />
+                      </svg>
+                    </div>
+                    <div class="flex-auto">
+                      <a href="software.html" class="block font-semibold text-gray-900">
+                        Software Development
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">Custom software solutions that excel</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                  <a href="assets/images/header/Daniel main Resume .pdf" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-gray-400">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.75 12 3 3m0 0 3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                    </svg>                    
+                    Resume
+                  </a>
+                  <a href="contact.html" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+                    <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd" />
+                    </svg>
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </div>
+      
+            <a href="portfolio.html" class="text-md font-semibold text-gray-900">Portfolio</a>
+            <div class="relative group">
+              <button type="button" id="product-lg" class="flex items-center gap-x-1 text-md font-semibold text-gray-900" aria-expanded="false">
+                Company
+                <svg class="size-5 flex-none text-gray-700" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                </svg>
+              </button>
+      
+              <!--
+                'Product' flyout menu, show/hide based on flyout menu state.
+      
+                Entering: "transition ease-out duration-200"
+                  From: "opacity-0 translate-y-1"
+                  To: "opacity-100 translate-y-0"
+                Leaving: "transition ease-in duration-150"
+                  From: "opacity-100 translate-y-0"
+                  To: "opacity-0 translate-y-1"
+              -->
+              <div id="dropdown" class="absolute group-hover:block hidden -left-8 top-full z-10 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 -ml-36">
+                <div class="p-4">
+                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600 group-hover:text-indigo-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                      </svg>
+                      
+                    
+                    </div>
+                    <div class="flex-auto">
+                      <a href="about.html" class="block font-semibold text-gray-900">
+                        About Us
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">We create innovative digital solutions to empower businesses</p>
+                    </div>
+                  </div>
+                  <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                    <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600 group-hover:text-indigo-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                      </svg>           
+                    </div>
+                    <div class="flex-auto">
+                      <a href="#" class="block font-semibold text-gray-900">
+                        Our Team
+                        <span class="absolute inset-0"></span>
+                      </a>
+                      <p class="mt-1 text-gray-600">We delivers exceptional digital solutions</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                  <a href="assets/images/header/Daniel main Resume .pdf" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 flex-none text-gray-400">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.75 12 3 3m0 0 3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                    </svg>
+                    
+                    Resume
+                  </a>
+                  <a href="contact.html" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100">
+                    <svg class="size-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                      <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd" />
+                    </svg>
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="text-md font-semibold text-gray-900">Contact Us</a>
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-6">
+            <a href="https://calendly.com/danielekene68/consultation-with-the-voyage-team" class="text-sm font-bold bg-blue-500 text-white px-6 py-3 rounded-full transition-all duration-300">BOOK A CALL
+              <!-- <span aria-hidden="true">&rarr;</span> -->
+            </a>
+            <a href="assets/images/header/Daniel main Resume .pdf" class="text-sm font-bold bg-blue-500 text-white px-6 py-3 rounded-full transition-all duration-300 inline-flex gap-1">RESUME
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+            </a>
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <!-- <div class="fixed inset-0 z-10"></div> -->
+          <div class="fixed inset-x-0 top-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 lg:max-w-sm lg:ring-1 lg:ring-gray-900/10 border-b">
+            <div class="flex items-center justify-between">
+              <a href="index.html" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img class="h-8 w-auto" src="assets/images/header/Voyage logo.PNG" alt="">
+              </a>
+
+
+              <div class="flex items-center gap-6">
+                <a href="https://calendly.com/danielekene68/consultation-with-the-voyage-team" class="text-sm/6 font-bold bg-blue-500 text-white px-5 py-1 rounded-full transition-all duration-300 ">BOOK A CALL
+                  <!-- <span aria-hidden="true">&rarr;</span> -->
+                </a>
+  
+                <button type="button" id="hamburger" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 block">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+                  </svg>
+                </button>
+  
+                  
+                <button type="button" id="close-btn" class="-m-2.5 rounded-md p-2.5 text-gray-700 hidden">
+                  <span class="sr-only">Close menu</span>
+                  <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+            <div id="mobile-navbar" class="mt-6 flow-root hidden">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6 divide-y">
+                  <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Home</a>
+                  <div class="-mx-3">
+                    <button type="button" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
+                      Services
+                      <!--
+                        Expand/collapse icon, toggle classes based on menu open state.
+      
+                        Open: "rotate-180", Closed: ""
+                      -->
+                      <svg class="size-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                    <div class="mt-2 space-y-2 hidden dropdown" id="disclosure-1">
+                      <a href="web-dev.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Web Development</a>
+                      <a href="e-com.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">E-commerce Development</a>
+                      <a href="app-dev.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Mobile App Development</a>
+                      <a href="software.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Software Development</a>
+                    </div>
+                  </div>
+                  <a href="portfolio.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Portfolio</a>
+                  <div class="-mx-3">
+                    <button type="button" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50" aria-controls="disclosure-2" aria-expanded="false">
+                      Company
+                      <!--
+                        Expand/collapse icon, toggle classes based on menu open state.
+      
+                        Open: "rotate-180", Closed: ""
+                      -->
+                      <svg class="size-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+                        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                      </svg>
+                    </button>
+                    <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                    <div class="mt-2 space-y-2 hidden dropdown" id="disclosure-2">
+                      <a href="about.html" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">About Us</a>
+                      <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50">Our Team</a>
+                    </div>
+                  </div>
+                  <a href="contact.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact Us</a>
+                </div>
+                <div class="py-6">
+                  <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a> -->
+
+                  <a href="assets/images/header/Daniel main Resume .pdf" class="-mx-3 block text-base/7 font-bold bg-blue-500 text-white px-5 py-1 rounded-full transition-all duration-300 w-32 inline-flex items-center gap-1">RESUME
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="1.5" stroke="currentColor" class="size-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+
+      <section>
+        <div class="grid md:grid-cols-2 mt-20 lg:mt-24 items-center lg:p-8 w-full">
+          <div class="text-center md:text-left">
+            <h1 class="md:text-5xl text-2xl font-semibold m-8">Frequently Asked Questions</h1>
+            <p class="m-8 md:text-xl leading-7">There could be some questions you're too shy to ask. Here, we answered them for you. You're welcome.
+            </p>
+          </div>
+      
+          <div>
+            <img class="w-4/5" src="assets/images/faqs/faq-banner.svg" alt="image">
+          </div>
+        </div>
+      </section> 
+
+
+
+      <section class="text-black font-sans bg-gray-100 mt-16 pt-8">
+      
+        <div class="mx-10 py-10">
+          <!-- FAQ Item -->
+          <div class="border-1 rounded shadow-xl divide-y mb-4 bg-white">
+            <button class="w-full text-left flex items-center py-4 font-semibold text-lg transition-colors duration-500 ease-in-out"
+            onclick="toggleFaq(1)" id="button-1">
+              <svg id="icon-1" class="w-6 h-6 mr-2 ml-4 bg-gray-200 rounded-full transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+
+              <span>  How can I make payments to Voyage Technologies?</span>
+            </button>
+            <div id="faq-1" class="hidden pr-4 pl-4 md:pl-8 md:pr-8 pb-4 pt-4 text-dark transition-all duration-500 ease-in-out">
+              <p>As our modes of monetary transaction, we accept Bank Wire Transfer, PayPal, USDT and all Major Credit Cards.</p>
+            </div>
+          </div>
+      
+          <!-- FAQ Item -->
+          <div class="border-1 rounded shadow-xl divide-y mb-4 bg-white">
+            <button class="w-full text-left flex items-center py-4 font-semibold text-lg transition-colors duration-500 ease-in-out"
+            onclick="toggleFaq(2)" id="button-2">
+              <svg id="icon-2" class="w-6 h-6 mr-2 ml-4 bg-gray-200 rounded-full transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span> What kind of support & maintenance services will I get from Voyage Technologies?</span>
+            </button>
+            <div id="faq-2" class="hidden pr-4 pl-4 md:pl-8 md:pr-8 pb-4 pt-4  text-black">
+              <p>
+                Voyage Technologies is known for their uncompromised customer support and maintenance services. To maintain such standards, we offer routine software check-ups and debugging services. If needed, we provide software up-gradation, 3rd-Party API development, software migration, and many more services to ensure flawless performance of your software.</p>
+            </div>
+          </div>
+      
+          <!-- FAQ Item -->
+          <div class="border-1 rounded shadow-xl divide-y mb-4 bg-white">
+            <button class="w-full text-left flex items-center py-4 font-semibold text-lg transition-colors duration-500 ease-in-out"
+            onclick="toggleFaq(3)" id="button-3">
+              <svg id="icon-3" class="w-6 h-6 mr-2 ml-4 bg-gray-200 rounded-full transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span> What types of roles can I expect from you for my development project?</span>
+            </button>
+            <div id="faq-3" class="hidden pr-4 pl-4 md:pl-8 md:pr-8 pb-4 pt-4 md:pr-8 pb-4 pt-4 text-black">
+              <p>
+                Voyage Technologies specializes in complete software and mobile app development. Hence, all roles from business analyst to developers, from designers to delivery manager, you can expect during your development project. Teams are customizable according to your needs as well.</p>
+            </div>
+          </div>
+      
+          <!-- FAQ Item -->
+          <div class="border-1 rounded shadow-xl divide-y mb-4 bg-white">
+            <button class="w-full text-left flex items-center py-4 font-semibold text-lg transition-colors duration-500 ease-in-out"
+            onclick="toggleFaq(4)" id="button-4">
+              <svg id="icon-4" class="w-6 h-6 mr-2 ml-4 bg-gray-200 rounded-full transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span>I’m not sure what type of services I need for my development project, can you help?</span>
+            </button>
+            <div id="faq-4" class="hidden pr-4 pl-4 md:pl-8 md:pr-8 pb-4 pt-4  text-black">
+              <p>
+                All you need to do is contact our experts at Voyage Technologies. That’s it. We will take care of the rest. We will assist you at every step of the project with 100% transparency.</p>
+            </div>
+          </div>
+      
+          <!-- FAQ Item -->
+          <div class="border-1 rounded shadow-xl divide-y mb-4 bg-white">
+            <button class="w-full text-left flex items-center py-4 font-semibold text-lg transition-colors duration-500 ease-in-out"
+            onclick="toggleFaq(5)" id="button-5">
+              <svg id="icon-5" class="w-6 h-6 mr-2 ml-4 bg-gray-200 rounded-full transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span>How can I hire dedicated developers from Voyage Technologies?</span>
+            </button>
+            <div id="faq-5" class="hidden pr-4 pl-4 md:pl-8 md:pr-8 pb-4 pt-4  text-black">
+              <p>
+                Simply contact our experts, discuss your project details, then schedule the interviews. Build a team of your selected professionals. And then choose your preferred hiring model. And you’re done. We will take care of the project from then on.</p>
+            </div>
+          </div>
+          <!-- FAQ Item -->
+          <div class="border-1 rounded shadow-xl divide-y mb-4 bg-white">
+            <button class="w-full text-left flex items-center py-4 font-semibold text-lg transition-colors duration-500 ease-in-out"
+            onclick="toggleFaq(6)" id="button-6">
+              <svg id="icon-6" class="w-6 h-6 mr-2 ml-4 bg-gray-200 rounded-full transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span>Tell me about your project execution process?</span>
+            </button>
+            <div id="faq-6" class="hidden pr-4 pl-4 md:pl-8 md:pr-8 pb-4 pt-4  text-black">
+              <p>
+                It all starts from Ideation, here we discuss your project requirements, audit the scope of work, target audience, and evaluate technologies to work with, and feature you need, etc. After confirmation of paperwork we kick-off the project with wireframe designing followed by graphic designing. For development, we incorporate Agile Methodology to produce world-class software.
+                For detailed information about NDA, and Source Code delivery, please contact our experts.
+                </p>
+            </div>
+          </div>
+          <!-- FAQ Item -->
+          <div class="border-1 rounded shadow-xl divide-y mb-4 bg-white">
+            <button class="w-full text-left flex items-center py-4 font-semibold text-lg transition-colors duration-500 ease-in-out"
+            onclick="toggleFaq(7)" id="button-7">
+              <svg id="icon-7" class="w-6 h-6 mr-2 ml-4 bg-gray-200 rounded-full transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span> What development methodology is used at Voyage Technologies?</span>
+            </button>
+            <div id="faq-7" class="hidden pr-4 pl-4 md:pl-8 md:pr-8 pb-4 pt-4  text-black">
+              <p>
+                Agile Methodology is incorporated at Voyage Technologies to ensure the highest standard of software development.</p>
+            </div>
+          </div>
+          <!-- FAQ Item -->
+          <div class="border-1 rounded shadow-xl divide-y mb-4 bg-white">
+            <button class="w-full text-left flex items-center py-4 font-semibold text-lg transition-colors duration-500 ease-in-out"
+            onclick="toggleFaq(8)" id="button-8">
+              <svg id="icon-8" class="w-6 h-6 mr-2 ml-4 bg-gray-200 rounded-full transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+              </svg>
+              <span>What communication methods are used at Arka Software?</span>
+            </button>
+            <div id="faq-8" class="hidden pr-4 pl-4 md:pl-8 md:pr-8 pb-4 pt-4  text-black">
+              <p>
+                Almost all widely used communication methods and tools are used at Arka Software for uninterrupted communication. To name a few, Phone Calls, E-Mail, Video calls (FaceTime, Google Meet, Zoom, Skype), WhatsApp, Facebook Messenger, Skype, Slack, Microsoft Teams, etc..</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      
+
+      <footer class="bg-gray-900 text-white">
+        <div class="container mx-auto py-8 px-4">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-white">Providing expert web solutions to help your business thrive online.</h2>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-pinterest"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">Services</h3>
+                    <ul>
+                        <li><a href="web-dev.html" class="text-gray-300 hover:text-white">Web Development</a></li>
+                        <li><a href="app-dev.html" class="text-gray-300 hover:text-white">App Development</a></li>
+                        <li><a href="software.html" class="text-gray-300 hover:text-white">Software Development</a></li>
+                        <li><a href="e-com.html" class="text-gray-300 hover:text-white">E-commerce</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">Company</h3>
+                    <ul>
+                        <li><a href="about.html" class="text-gray-300 hover:text-white">About</a></li>
+                        <li><a href="portfolio.html" class="text-gray-300 hover:text-white">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Testimonials</a></li>
+                        <li><a href="faqs.html" class="text-gray-300 hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">Support</h3>
+                    <ul>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Submit Ticket</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white">Contact Us</a></li>
+                        <li><a href="https://calendly.com/danielekene68/consultation-with-the-voyage-team" class="text-gray-300 hover:text-white">Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-white">Legal</h3>
+                    <ul>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">License</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-8 border-t border-gray-700 pt-4">
+                <p class="text-white">&copy; 2024 Voyage Technologies, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="https://wa.me/+2349027925008/?text=Welcome to Voyage Technologies, How can we help you?" class="floating-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="56" height="56" viewBox="0 0 256 256" xml:space="preserve">
+
+        <defs>
+        </defs>
+        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+          <circle cx="45" cy="45" r="45" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(42,181,64); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+          <path d="M 16.138 44.738 c -0.002 5.106 1.332 10.091 3.869 14.485 l -4.112 15.013 l 15.365 -4.029 c 4.233 2.309 8.999 3.525 13.85 3.527 h 0.012 c 15.973 0 28.976 -12.999 28.983 -28.974 c 0.003 -7.742 -3.01 -15.022 -8.481 -20.498 c -5.472 -5.476 -12.749 -8.494 -20.502 -8.497 C 29.146 15.765 16.145 28.762 16.138 44.738 M 25.288 58.466 l -0.574 -0.911 c -2.412 -3.834 -3.685 -8.266 -3.683 -12.816 c 0.005 -13.278 10.811 -24.081 24.099 -24.081 c 6.435 0.003 12.482 2.511 17.031 7.062 c 4.548 4.552 7.051 10.603 7.05 17.037 C 69.205 58.036 58.399 68.84 45.121 68.84 h -0.009 c -4.323 -0.003 -8.563 -1.163 -12.261 -3.357 l -0.88 -0.522 l -9.118 2.391 L 25.288 58.466 z M 45.122 73.734 L 45.122 73.734 L 45.122 73.734 C 45.122 73.734 45.121 73.734 45.122 73.734" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+          <path d="M 37.878 32.624 c -0.543 -1.206 -1.113 -1.23 -1.63 -1.251 c -0.422 -0.018 -0.905 -0.017 -1.388 -0.017 c -0.483 0 -1.268 0.181 -1.931 0.906 c -0.664 0.725 -2.535 2.477 -2.535 6.039 c 0 3.563 2.595 7.006 2.957 7.49 c 0.362 0.483 5.01 8.028 12.37 10.931 c 6.118 2.412 7.362 1.933 8.69 1.812 c 1.328 -0.121 4.285 -1.751 4.888 -3.442 c 0.604 -1.691 0.604 -3.14 0.423 -3.443 c -0.181 -0.302 -0.664 -0.483 -1.388 -0.845 c -0.724 -0.362 -4.285 -2.114 -4.948 -2.356 c -0.664 -0.241 -1.147 -0.362 -1.63 0.363 c -0.483 0.724 -1.87 2.355 -2.292 2.838 c -0.422 0.484 -0.845 0.544 -1.569 0.182 c -0.724 -0.363 -3.057 -1.127 -5.824 -3.594 c -2.153 -1.92 -3.606 -4.29 -4.029 -5.015 c -0.422 -0.724 -0.045 -1.116 0.318 -1.477 c 0.325 -0.324 0.724 -0.846 1.087 -1.268 c 0.361 -0.423 0.482 -0.725 0.723 -1.208 c 0.242 -0.483 0.121 -0.906 -0.06 -1.269 C 39.929 37.637 38.522 34.056 37.878 32.624" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+        </g>
+        </svg>
+
+      </a>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      // General function to setup dropdown toggles
+function setupDropdownToggle(buttonSelector, dropdownSelector) {
+  const button = document.querySelector(buttonSelector);
+  const dropdown = document.querySelector(dropdownSelector);
+
+  if (button && dropdown) {
+    button.addEventListener("click", () => {
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+      // Close all dropdowns first
+      document.querySelectorAll('[aria-expanded="true"]').forEach((openButton) => {
+        openButton.setAttribute("aria-expanded", "false");
+      });
+      document.querySelectorAll(".dropdown").forEach((openDropdown) => {
+        openDropdown.classList.add("hidden");
+      });
+
+      // Toggle the clicked dropdown
+      button.setAttribute("aria-expanded", !isExpanded);
+      dropdown.classList.toggle("hidden", isExpanded); // Show or hide based on current state
+    });
+  }
+}
+
+// Initialize toggles
+setupDropdownToggle('[aria-controls="disclosure-1"]', '#disclosure-1'); // Products
+setupDropdownToggle('[aria-controls="disclosure-2"]', '#disclosure-2'); // Services
+
+  
+
+
+
+
+      const hamburger = document.getElementById('hamburger');
+      const closeBtn = document.getElementById('close-btn');
+      const navBar = document.getElementById('mobile-navbar');
+
+
+      hamburger.addEventListener("click", () => {
+        if(hamburger.classList.contains('block')) {
+          hamburger.classList.remove('block')
+          hamburger.classList.add('hidden');
+          closeBtn.classList.remove('hidden')
+          navBar.classList.remove('hidden')
+        } 
+      })
+
+      closeBtn.addEventListener("click", () => {
+        closeBtn.classList.add('hidden')
+        hamburger.classList.remove('hidden')
+        hamburger.classList.add('block')
+        navBar.classList.add('hidden')
+
+      })
+      
+    });
+
+
+    
+
+</script>
+
+
+    
+    
+
+
+
+    
+        <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

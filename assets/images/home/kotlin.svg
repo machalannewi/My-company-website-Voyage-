@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90" height="90.002" viewBox="0 0 90 90.002">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.144" x2="0.837" y2="0.948" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#989898"/>
+      <stop offset="1" stop-color="#717171"/>
+    </linearGradient>
+  </defs>
+  <g id="kotlin" transform="translate(-835 -6813)">
+    <path id="Path_4754" data-name="Path 4754" d="M3170.71-10047.025a103.369,103.369,0,0,1,19.322,1.26,36.006,36.006,0,0,1,11.522,3.869c6.583,3.709,10.149,9.59,12,16.709a72.781,72.781,0,0,1,2.048,16.391,143.946,143.946,0,0,1-.785,23.279,42.468,42.468,0,0,1-3.449,12.654c-3.393,7.162-9.218,11.309-16.683,13.41a69.695,69.695,0,0,1-16.875,2.268,152.465,152.465,0,0,1-22.006-.568,51.487,51.487,0,0,1-11.5-2.5c-8.012-2.861-13.182-8.432-15.757-16.486a67.012,67.012,0,0,1-2.693-18.512,151.258,151.258,0,0,1,.581-21.807,49.452,49.452,0,0,1,2.735-12.092c2.942-7.732,8.482-12.656,16.292-15.141,6.293-1.994,12.8-2.49,19.34-2.719C3166.774-10047.08,3168.743-10047.025,3170.71-10047.025Z" transform="translate(-2290.727 16860.047)" fill-rule="evenodd" fill="url(#linear-gradient)"/>
+    <g id="kotlin-seeklogo.com" transform="translate(863.783 6835.996)">
+      <path id="Path_11526" data-name="Path 11526" d="M0,149.478l21.746-22.226,21.974,22.226Z" transform="translate(-1.099 -103.187)" fill="#fff"/>
+      <path id="Path_11527" data-name="Path 11527" d="M0,0H21.933L0,23.682Z" transform="translate(-2 -2)" fill="#fff"/>
+      <path id="Path_11528" data-name="Path 11528" d="M23.748-1,0,24.463V46.382L22.838,23.068,46.434-1Z" transform="translate(-2 -1)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
